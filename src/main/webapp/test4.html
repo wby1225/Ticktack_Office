@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>评分组件</title>
+    <link rel="stylesheet" href="media/layui/css/layui.css">
+</head>
+<body>
+<div id="test1"></div>
+<script src="media/layui/layui.js"></script>
+<script>
+    layui.use('rate', function(values){
+        var rate = layui.rate;
+
+        //渲染
+        var ins1 = rate.render({
+            elem: '#test1',  //绑定元素
+            value:values
+        });
+    });
+</script>
+</body>
+</html>

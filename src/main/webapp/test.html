@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+//接收多值
+function manyValues(){
+var url=window.location.search;
+var res="";
+var s=url.indexOf("?");
+if(s>-1){
+	var str = url.substr(s+1);
+	if(str.indexOf('&')>-1){
+		 strs = str.split("&"); 
+	}else{
+		strs=new Array();
+		strs[0]=str;
+	}
+	res+="{";
+   for(i=0;i<strs.length;i++){
+    var arr1=strs[i].split("=");
+    var obj=new Object();
+    res+=arr1[0]+":"+arr1[1];
+    if(i<strs.length-1){
+    	res+=",";
+    }
+   }
+   res+="}";
+} 
+return res;
+
+}
+function show() {
+	var obj=manyValues();
+	
+	console.log(JSON.parse(obj));
+	console.log(obj.a);
+}
+</script>
+</head>
+<body>
+<button onclick="show()">
+显示数据</button>
+</body>
+</html>

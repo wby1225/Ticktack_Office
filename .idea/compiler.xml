@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="SSM_Quest" />
+        <module name="Ticktack_Office" />
+        <module name="Ticktack_Office (1)" />
+        <module name="Ticktack_TQCS" />
+        <module name="wangbaoyun" />
+        <module name="wangbaoyun111" />
+        <module name="WebClient" />
+        <module name="WebService" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="8">
+      <module name="Ticktack_Office (2)" target="1.8" />
+      <module name="wangbaoyun1" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://E:/wangbaoyun" />
+    <file type="web" url="file://E:/wangbaoyun111" />
+    <file type="web" url="file://$PROJECT_DIR$" />
+    <file type="web" url="file://$PROJECT_DIR$/../wangbaoyun1" />
+    <file type="web" url="file://E:/辉哥/Day55/TickOA/Ticktack_Office" />
+    <file type="web" url="file://E:/辉哥/Day55/TickOA/Ticktack_TQCS" />
+    <file type="web" url="file://E:/辉哥/SSM/SSM_Quest" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="E:/辉哥/Day55/TickOA/pom.xml" />
+        <option value="E:/Test/pom.xml" />
+        <option value="E:/wangbaoyun/pom.xml" />
+        <option value="E:/wangbaoyun111/pom.xml" />
+        <option value="E:/辉哥/SSM/SSM_Quest/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

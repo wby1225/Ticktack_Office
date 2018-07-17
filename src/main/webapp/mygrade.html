@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>滴答办公系统-班级学生</title>
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, maximum-scale=1">
+<link rel="stylesheet" href="media/layui/css/layui.css" media="all">
+<script src="media/layui/layui.js"></script>
+<script type="text/javascript" src="media/js/jquery.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$.get("querystudentbycno.do", function(data) {
+			var obj = data;
+			console.log(obj);
+			if (obj.code == 0) {
+				var arr = obj.data;
+				console.log(arr);
+				showData(arr);
+			}
+		})
+
+	})
+	function showData(arr) {
+		$("#tdata").append("<p>");
+		for (var i = 0; i < arr.length; i++) {
+			if ((i + 1) % 5 == 0) {
+				$("#tdata").append(
+						"</p><p><input type='button' value='"+arr[i].name+"'>");
+			} else {
+				$("#tdata").append(
+						"<input type='button' value='"+arr[i].name+"'>");
+			}
+		}
+		$("#tdata").append("</p>");
+
+	}
+</script>
+</head>
+<body>
+
+	<div class="layui-container" style="margin-top: 20px">
+		<div id="tdata"></div>
+
+	</div>
+
+
+
+
+</body>
+</html>

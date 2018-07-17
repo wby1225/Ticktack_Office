@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport"
+		  content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title>滴答OA</title>
+	<link rel="stylesheet" href="media/layui/css/layui.css" media="all">
+	<link rel="stylesheet" href="media/css/font-awesome.min.css" media="all">
+	<!-- <link rel="stylesheet" type="text/css" href="http://www.jq22.com/jquery/font-awesome.4.6.0.css"> -->
+	<link rel="stylesheet" href="media/css/app.css" media="all">
+</head>
+
+<body>
+<div class="layui-layout layui-layout-admin kit-layout-admin">
+	<div class="layui-header">
+		<div class="layui-logo">
+			<img src="media/images/qf_logo.png" style="margin-right: 10px" /><span
+				style="font-size: 22px">滴答OA</span>
+		</div>
+		<div class="layui-logo kit-logo-mobile">wby</div>
+		<ul class="layui-nav layui-layout-left kit-nav">
+			<li class="layui-nav-item"><a href="javascript:;">学生管理</a></li>
+			<li class="layui-nav-item">
+				<a href="javascript:;">其它系统</a>
+				<dl class="layui-nav-child">
+					<dd><a href="javascript:;">邮件管理</a></dd>
+					<dd><a href="javascript:;">消息管理</a></dd>
+					<dd><a href="javascript:;">授权管理</a></dd>
+				</dl>
+			</li>
+			<li class="layui-nav-item">
+				<form method="post" action="" class="layui-form">
+					<div class="layui-input-inline" style="margin-left: 750px;">
+						<input class="layui-input" type="text" placeholder="请输入您要搜索的内容" name="seach">
+						<input type="submit" id="a" name="a" style="display: none">
+					</div>
+					<div class="layui-input-inline">
+						<label style="margin-top: 6px;margin-left: -65px;" for="a" class="layui-form-label"><i class="layui-icon layui-icon-search" style="font-size: 25px;" ></i> </label>
+					</div>
+				</form>
+			</li>
+		</ul>
+
+
+
+
+		<ul class="layui-nav layui-layout-right kit-nav">
+			<li class="layui-nav-item"><a href="javascript:;"> <img
+					src="media/images/qf.jpg" class="layui-nav-img"> Wby
+			</a>
+				<dl class="layui-nav-child">
+					<dd>
+						<a href="javascript:;">基本资料</a>
+					</dd>
+					<dd>
+						<a href="javascript:;">安全设置</a>
+					</dd>
+				</dl></li>
+			<li class="layui-nav-item"><a href="loginout.do"><i
+					class="fa fa-sign-out" aria-hidden="true"></i> 注销</a></li>
+		</ul>
+
+	</div>
+	<div class="layui-side layui-bg-black kit-side">
+		<div class="layui-side-scroll">
+			<div class="kit-side-fold">
+				<i class="fa fa-home" aria-hidden="true"></i>
+			</div>
+			<!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+			<ul class="layui-nav layui-nav-tree" lay-filter="kitNavbar"
+				kit-navbar>
+				<li class="layui-nav-item"><a class="" href="javascript:;"><i
+						class="fa fa-user" aria-hidden="true">&nbsp;</i><span>学员后台</span></a>
+					<dl class="layui-nav-child">
+						<dd>
+							<a href="javascript:;" data-url="studentinfo.html"
+							   data-icon="fa-user" data-title="我的资料" kit-target data-id='11'><i
+									class="layui-icon layui-icon-username">&nbsp;</i><span>我的资料</span></a>
+						</dd>
+						<dd>
+							<a href="javascript:;" data-url="mygrade.html" data-icon="fa-user"
+							   data-title="我的同学" kit-target data-id='12'><i
+									class="layui-icon layui-icon-friends">&nbsp;</i><span>我的同学</span></a>
+						</dd>
+						<dd>
+							<a href="javascript:;" data-url="nodo.html" data-icon="&#xe628;"
+							   data-title="我的周报" kit-target data-id='13'><i
+									class="layui-icon layui-icon-form">&nbsp;</i><span>我的周报</span></a>
+						</dd>
+						<dd>
+							<a href="javascript:;" data-url="nodo.html" data-icon="&#xe628;"
+							   data-title="vip申请" kit-target data-id='14'><i
+									class="layui-icon layui-icon-diamond">&nbsp;</i><span>VIP申请</span></a>
+						</dd>
+						<dd>
+							<a href="javascript:;" data-url="nodo.html" data-icon="&#xe628;"
+							   data-title="匿名投诉" kit-target data-id='15'><i
+									class="layui-icon layui-icon-help">&nbsp;</i><span>匿名投诉</span></a>
+						</dd>
+						<dd>
+							<a href="javascript:;" data-url="nodo.html" data-icon="&#xe628;"
+							   data-title="技术问题" kit-target data-id='6'><i
+									class="layui-icon layui-icon-chart">&nbsp;</i><span>技术问题</span></a>
+						</dd>
+					</dl></li>
+				<li class="layui-nav-item"><a class="" href="javascript:;"><i
+						class="fa fa-pencil-square-o" aria-hidden="true">&nbsp;</i><span>理论练习</span></a>
+					<dl class="layui-nav-child">
+
+						<dd>
+							<a href="javascript:;" data-url="nodo.html"
+							   data-icon="fa-user" data-title="新增练习" kit-target data-id='21'><i
+									class="layui-icon layui-icon-add-1">&nbsp;</i><span>新增练习</span></a>
+						</dd>
+						<dd>
+							<a href="javascript:;" data-url="nodo.html" data-icon="fa-user"
+							   data-title="习题列表" kit-target data-id='22'><i
+									class="layui-icon layui-icon-list">&nbsp;</i><span>习题列表</span></a>
+						</dd>
+						<dd>
+							<a href="javascript:;" data-url="nodo.html" data-icon="&#xe628;"
+							   data-title="开始刷题" kit-target data-id='23'><i
+									class="layui-icon layui-icon-play">&nbsp;</i><span>开始刷题</span></a>
+						</dd>
+					</dl></li>
+				<li class="layui-nav-item"><a href="javascript:;"><i
+						class="fa fa-folder-open" aria-hidden="true">&nbsp;</i><span>我的资源</span></a>
+					<dl class="layui-nav-child">
+
+						<dd>
+							<a href="javascript:;" data-url="nodo.html" data-icon="fa-user"
+							   data-title="学习笔记" kit-target data-id='31'><i
+									class="layui-icon layui-icon-tabs">&nbsp;</i><span>学习笔记</span></a>
+						</dd>
+						<dd>
+							<a href="javascript:;" data-url="nodo.html" data-icon="fa-user"
+							   data-title="我的代码" kit-target data-id='32'><i
+									class="layui-icon layui-icon-code-circle">&nbsp;</i><span>我的代码</span></a>
+						</dd>
+						<dd>
+							<a href="javascript:;" data-url="questionadd.html"
+							   data-icon="fa-user" data-title="新增面试题" kit-target data-id='33'><i
+									class="layui-icon layui-icon-add-1">&nbsp;</i><span>新增资源</span></a>
+						</dd>
+						<dd>
+							<a href="javascript:;" data-url="resourcelibrary.html" data-icon="&#xe628;"
+							   data-title="资源库" kit-target data-id='34'><i
+									class="layui-icon layui-icon-read">&nbsp;</i><span>资源库</span></a>
+						</dd>
+						<dd>
+							<a href="javascript:;" data-url="nodo.html" data-icon="&#xe628;"
+							   data-title="资源收藏" kit-target data-id='35'><i
+									class="layui-icon layui-icon-star-fill">&nbsp;</i><span>资源收藏</span></a>
+						</dd>
+					</dl></li>
+				<li class="layui-nav-item"><a href="javascript:;"><i
+						class="fa fa-paper-plane-o" aria-hidden="true">&nbsp;</i><span>考勤管理</span></a>
+					<dl class="layui-nav-child">
+
+						<dd>
+							<a href="javascript:;" data-url="nodo.html"
+							   data-icon="fa-user" data-title="新增部门" kit-target data-id='41'><i
+									class="layui-icon layui-icon-add-1">&nbsp;</i><span>考勤列表</span></a>
+						</dd>
+						<dd>
+							<a href="javascript:;" data-url="nodo.html"
+							   data-icon="&#xe628;" data-title="部门列表" kit-target data-id='42'><i
+									class="layui-icon layui-icon-list">&nbsp;</i><span>申请</span></a>
+						</dd>
+
+					</dl></li>
+				<li class="layui-nav-item"><a href="javascript:;"><i
+						class="fa fa-steam" aria-hidden="true">&nbsp;</i><span>部门管理</span></a>
+					<dl class="layui-nav-child">
+						<dd>
+							<a href="javascript:;" data-url="departadd.html"
+							   data-icon="fa-user" data-title="新增部门" kit-target data-id='51'><i
+									class="layui-icon layui-icon-add-1">&nbsp;</i><span>新增部门</span></a>
+						</dd>
+						<dd>
+							<a href="javascript:;" data-url="departlist.html"
+							   data-icon="&#xe628;" data-title="部门列表" kit-target data-id='52'><i
+									class="layui-icon layui-icon-list">&nbsp;</i><span>部门列表</span></a>
+						</dd>
+					</dl></li>
+
+				<li class="layui-nav-item"><a href="javascript:;"><i
+						class="fa fa-users" aria-hidden="true">&nbsp;</i><span>员工管理</span></a>
+					<dl class="layui-nav-child">
+
+						<dd>
+							<a href="javascript:;" data-url="staffadd.html"
+							   data-icon="fa-user" data-title="新增员工" kit-target data-id='61'><i
+									class="layui-icon layui-icon-add-1">&nbsp;</i><span>新增员工</span></a>
+						</dd>
+						<dd>
+							<a href="javascript:;" data-url="staffbatch.html"
+							   data-icon="fa-user" data-title="导入员工" kit-target data-id='62'><i
+									class="layui-icon layui-icon-upload">&nbsp;</i><span>导入员工</span></a>
+						</dd>
+						<dd>
+							<a href="javascript:;" data-url="stafflist.html"
+							   data-icon="&#xe628;" data-title="员工列表" kit-target data-id='63'><i
+									class="layui-icon layui-icon-list">&nbsp;</i><span>员工列表</span></a>
+						</dd>
+					</dl></li>
+				<li class="layui-nav-item"><a href="javascript:;"><i
+						class="fa fa-university" aria-hidden="true">&nbsp;</i><span>班级管理</span></a>
+					<dl class="layui-nav-child">
+
+						<dd>
+							<a href="javascript:;" data-url="gradeadd.html"
+							   data-icon="fa-user" data-title="开新班" kit-target data-id='71'><i
+									class="layui-icon layui-icon-add-1">&nbsp;</i><span>开新班</span></a>
+						</dd>
+						<dd>
+							<a href="javascript:;" data-url="studentadd.html"
+							   data-icon="fa-user" data-title="添加学生" kit-target data-id='72'><i
+									class="layui-icon layui-icon-add-1">&nbsp;</i><span>添加学生</span></a>
+						</dd>
+						<dd>
+							<a href="javascript:;" data-url="studentbatch.html"
+							   data-icon="fa-user" data-title="导入学生" kit-target data-id='73'><i
+									class="layui-icon layui-icon-upload">&nbsp;</i><span>导入学生</span></a>
+						</dd>
+						<dd>
+							<a href="javascript:;" data-url="gradelist.html"
+							   data-icon="&#xe628;" data-title="班级列表" kit-target data-id='74'><i
+									class="layui-icon layui-icon-list">&nbsp;</i><span>班级列表</span></a>
+						</dd>
+					</dl></li>
+				<li class="layui-nav-item"><a href="javascript:;"><i
+						class="fa fa-book" aria-hidden="true">&nbsp;</i><span>学科管理</span></a>
+					<dl class="layui-nav-child">
+
+						<dd>
+							<a href="javascript:;" data-url="courseadd.html"
+							   data-icon="fa-user" data-title="新增学科" kit-target data-id='81'><i
+									class="layui-icon layui-icon-add-1">&nbsp;</i><span>新增学科</span></a>
+						</dd>
+						<dd>
+							<a href="javascript:;" data-url="courselist.html"
+							   data-icon="&#xe628;" data-title="学科列表" kit-target data-id='82'><i
+									class="layui-icon layui-icon-list">&nbsp;</i><span>学科列表</span></a>
+						</dd>
+					</dl></li>
+			</ul>
+		</div>
+	</div>
+	<div class="layui-body" id="container">
+		<!-- 内容主体区域 -->
+		<div style="padding: 15px;">主体内容加载中,请稍等...</div>
+	</div>
+
+	<div class="layui-footer">
+		<!-- 底部固定区域 -->
+		2017 &copy; <a href="http://kit.zhengjinfan.cn/">kit.zhengjinfan.cn/</a>
+		MIT license
+
+	</div>
+</div>
+
+<script src="media/layui/layui.js"></script>
+<script>
+    var message;
+    layui.config({
+        base : 'media/layui/lay/modules/'
+    }).use([ 'app', 'message' ], function() {
+        var app = layui.app, $ = layui.jquery, layer = layui.layer;
+        //将message设置为全局以便子页面调用
+        message = layui.message;
+        //主入口
+        app.set({
+            type : 'iframe'
+        }).init();
+    });
+</script>
+</body>
+
+</html>

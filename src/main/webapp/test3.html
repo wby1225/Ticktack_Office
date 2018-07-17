@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>layui</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="media/layui/css/layui.css" media="all">
+    <!-- 注意：如果你直接复制所有代码到本地，上述css路径需要改成你本地的 -->
+</head>
+<body>
+<div id="test5"></div>
+<script src="media/layui/layui.js" charset="utf-8"></script>
+<script>
+    function star(stars){
+    layui.use(['rate'], function () {
+        var rate = layui.rate;
+
+        //自定义文本
+        rate.render({
+            elem: '#test5'
+            , value: stars
+            , text: true
+            , setText: function (value) { //自定义文本的回调
+                var arrs = {
+                    '1': '极差'
+                    , '2': '差'
+                    , '3': '中等'
+                    , '4': '好'
+                    , '5': '极好'
+                };
+                this.span.text(arrs[value] || (value + "星"));
+            }
+        })
+    });
+    }
+</script>
+
+</body>
+</html>
